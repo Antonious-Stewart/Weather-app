@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./public/css/main.css">
+  <title>Weather App</title>
+</head>
+<body>
+  <div class="container">
+    <main id="main-content">
+      <h1 id="app-header">Weather App</h1>
+      <span id="icon"></span>
+      <span id="forecast"></span>
+      <span id="temp"></span>
+      <span id="city"></span>
+      <span id="country"></span>
+      <form action="" method="GET">
+        <input type="text" name="city" id="city" placeholder="City">
+        <input type="text" name="zip" id="zip" placeholder="Zip Code">
+        <button>Submit</button>
+      </form>
+    </main>
+  </div>
+  <script src="https://npmcdn.com/babel-transform-in-browser@6.4.6/dist/btib.min.js"></script>
+  <script src="./public/js/app.js"></script>
+</body>
+</html>
