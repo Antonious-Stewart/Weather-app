@@ -1,3 +1,5 @@
+const form = document.querySelector("form");
+const button = document.querySelector("#unit");
 const getLocation = () =>{
   // geolocation
   if(navigator.geolocation){
@@ -31,19 +33,20 @@ function AJAX(){
   xhr.onload = function(){
     if(this.status === 200){
       const API = JSON.parse(this.response);
-      document.getElementById("temp").innerHTML = `${parseInt(KtoFahrenheit(API.main.temp))} °F/ ${parseInt(API.main.temp - 273.15)} °C`;
+      document.getElementById("temp").innerHTML = `${parseInt(KtoFahrenheit(API.main.temp))}`;
       document.getElementById("city").innerHTML = API.name + ",";
       document.getElementById("country").innerHTML = API.sys.country;
       document.getElementById("icon").innerHTML = `<img src=http://openweathermap.org/img/w/${API.weather[0].icon}.png alt="open weather app icon"/>`;
       document.getElementById("forecast").innerHTML = API.weather[0].main;
       
+    } else if(this.status === 404){
+      // if enter wrong location
     }
   }
   xhr.send();
 }
-
-const form = document.querySelector("form");
 getLocation();
+
 
 form.addEventListener('submit',(evt)=>{
   evt.preventDefault();
@@ -62,3 +65,15 @@ form.addEventListener('submit',(evt)=>{
   
   }
 )
+button.addEventListener('click',(evt)=>{
+  let temp = document.querySelector('#temp')
+  if(evt.target.textContent === "°F"){
+    temp.textContent = `${parseInt((temp.textContent  - 32) * 5/9 )} `;
+    evt.target.style.backgroundColor = "blue";
+    evt.target.textContent = `°C`;
+  } else {
+    temp.textContent = `${parseInt((temp.textContent  * 9/5) + 32 )}`;
+    evt.target.style.backgroundColor = "red";
+    evt.target.textContent = `°F`;
+  }
+})
