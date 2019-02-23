@@ -94,10 +94,16 @@ form button{
   vertical-align: text-bottom;
   color:#fff;
 }
-@media(max-width:500px){
+@media(max-width:748px){
   form button{
     flex: 1 0 100%;
     margin: 0;
+  }
+  .weather-block{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
   }
   form input[type="number"]{
     margin-left: 0;
@@ -107,5 +113,10 @@ form button{
   nav h1{
     font-size: 2.4rem;
     display: block;
+  }
+}
+@media(max-width:368px){
+  html{
+    font-size: 8px;
   }
 }
