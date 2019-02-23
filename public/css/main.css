@@ -53,14 +53,17 @@ form input[type="text"],
 form input[type="number"]{
   flex:1;
   padding: 1rem;
-  background: transparent;
+  font-size: 2.4rem;
+  background:transparent;
   border: none;
   border-bottom: solid red 2px;
   border-left: solid transparent 2px;
   color:#fff;
   opacity: .5;
 }
-
+form input[type="number"]{
+  margin-left: 1rem;
+}
 form input[type="text"]:focus,
 form input[type="number"]:focus{
   outline: none;
@@ -75,7 +78,7 @@ form button{
   flex:1;
   padding: 1.2rem 2rem;
   text-transform: uppercase;
-  margin-left: 2rem;
+  margin-left: 1rem;
   background: rgba(0,0,0,.8);
   border: none;
   color: red;
@@ -95,6 +98,9 @@ form button{
   form button{
     flex: 1 0 100%;
     margin: 0;
+  }
+  form input[type="number"]{
+    margin-left: 0;
   }
 }
 @media(max-width:380px){
