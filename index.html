@@ -8,17 +8,22 @@
   <title>Weather App</title>
 </head>
 <body>
+  <nav id="navigation-bar">
+      <h1 id="app-heading">Weather App</h1>
+    </nav>
   <div class="container">
     <main id="main-content">
-      <h1 id="app-header">Weather App</h1>
-      <span id="icon"></span>
-      <span id="forecast"></span>
-      <span id="temp"></span>
-      <span id="city"></span>
-      <span id="country"></span>
+      <div class="weather-block">
+        <span id="icon"></span>
+        <span id="forecast"></span>
+        <span id="temp"></span>
+        <button id="unit">°F</button>
+        <span id="city"></span>
+        <span id="country"></span>
+      </div>
       <form action="" method="GET">
         <input type="text" name="city" id="city" placeholder="City">
-        <input type="text" name="zip" id="zip" placeholder="Zip Code">
+        <input type="number" name="zip" id="zip" placeholder="Zip">
         <button>Submit</button>
       </form>
     </main>
