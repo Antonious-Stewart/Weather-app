@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito|Raleway');
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+html{
+  font-size: 10px;
+  font-family: "Nunito",sans-serif;
+}
+.container{
+  height: 90.6vh;
+  background: linear-gradient(100deg,#000,#f00);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+}
+nav{
+  background: #000;
+  letter-spacing: 4px;
+}
+nav h1{
+  background:#f00;
+  font-size: 3rem;
+  color:#000;
+  display: inline-block;
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  background: linear-gradient(#f00,#000);
+  color: #fff;
+  opacity: .8;
+}
+.weather-block{
+ flex: 1 0 100%;
+}
+.weather-block span{
+  display: inline-block;
+  font-size: 4.6rem;
+  color:#fff;
+  opacity: .8;
+  margin-right: 1rem;
+}
+form{
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+form input[type="text"],
+form input[type="number"]{
+  flex:1;
+  padding: 1rem;
+  background: transparent;
+  border: none;
+  border-bottom: solid red 2px;
+  border-left: solid transparent 2px;
+  color:#fff;
+  opacity: .5;
+}
+
+form input[type="text"]:focus,
+form input[type="number"]:focus{
+  outline: none;
+  border-left: solid red 2px;
+}
+form input[type="text"]::placeholder,
+form input[type="number"]::placeholder{
+  color: white;
+  font-size: 2.4rem;
+}
+form button{
+  flex:1;
+  padding: 1.2rem 2rem;
+  text-transform: uppercase;
+  margin-left: 2rem;
+  background: rgba(0,0,0,.8);
+  border: none;
+  color: red;
+  font-size: 1.6rem;
+}
+.weather-block button{
+  font-size: 1.8rem;
+  padding: .8rem;
+  background: red;
+  border: solid #fff 2px;
+  text-align: center;
+  border-radius: 5px;
+  vertical-align: text-bottom;
+  color:#fff;
+}
+@media(max-width:500px){
+  form button{
+    flex: 1 0 100%;
+    margin: 0;
+  }
+}
+@media(max-width:380px){
+  nav h1{
+    font-size: 2.4rem;
+    display: block;
+  }
+}
