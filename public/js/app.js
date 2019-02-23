@@ -38,9 +38,11 @@ function AJAX(){
       document.getElementById("country").innerHTML = API.sys.country;
       document.getElementById("icon").innerHTML = `<img src=http://openweathermap.org/img/w/${API.weather[0].icon}.png alt="open weather app icon"/>`;
       document.getElementById("forecast").innerHTML = API.weather[0].main;
-      
     } else if(this.status === 404){
       // if enter wrong location
+      const error = document.createElement("span");
+      error.textContent = "Invalid entry";
+      form.firstElementChild.value = error.textContent;
     }
   }
   xhr.send();
